@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <!-- favicon inline pour éviter 404 dans les logs -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230b6b2f'/%3E%3Ctext x='50%25' y='55%25' font-size='36' text-anchor='middle' fill='white' font-family='Helvetica, Arial' font-weight='bold'%3E%E2%99%A0%3C/text%3E%3C/svg%3E">
+  <title>Blackjack (Web)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blackjack</h1>
+    <div class="balance">Solde: <span id="balance">1000</span> €</div>
+  </header>
+
+  <main>
+    <div id="table">
+      <canvas id="tableCanvas" width="760" height="220"></canvas>
+      <div id="dealer-area">
+        <canvas id="dealerCanvas" width="760" height="90"></canvas>
+        <div class="val" id="dealerVal">Valeur: --</div>
+      </div>
+      <div id="player-area">
+        <canvas id="playerCanvas" width="760" height="120"></canvas>
+        <div class="val" id="playerVal">Valeur: --</div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <div id="bet-area">
+        Mise: <input id="betInput" type="number" value="10" min="1">
+        <div id="chips">
+          <button class="chip" data-value="1">1</button>
+          <button class="chip" data-value="5">5</button>
+          <button class="chip" data-value="10">10</button>
+          <button class="chip" data-value="25">25</button>
+          <button class="chip" data-value="100">100</button>
+        </div>
+      </div>
+
+      <div id="actions">
+        <button id="dealBtn">Distribuer</button>
+        <button id="hitBtn" disabled>Hit</button>
+        <button id="standBtn" disabled>Stand</button>
+        <button id="doubleBtn" disabled>Double</button>
+        <button id="surrenderBtn" disabled>Surrender</button>
+      </div>
+
+      <div id="msg">Bienvenue au Blackjack !</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Touchez "Ajouter à l'écran d'accueil" dans Safari pour jouer comme app native.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

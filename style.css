@@ -1,0 +1,15 @@
+*{box-sizing:border-box}
+body{font-family:Helvetica,Arial,sans-serif;margin:0;padding:0;background:#0b6b2f;color:#fff;display:flex;flex-direction:column;min-height:100vh}
+header{padding:12px;background:linear-gradient(#0a5,#073);display:flex;justify-content:space-between;align-items:center}
+main{flex:1;padding:12px}
+#table{max-width:760px;margin:0 auto}
+canvas{display:block;background:#0b6b2f;border-radius:8px}
+#controls{max-width:760px;margin:12px auto;display:flex;flex-direction:column;gap:8px}
+#bet-area{display:flex;gap:8px;align-items:center}
+#chips .chip{padding:6px 8px;border-radius:6px;border:0;background:#fbbf24;color:#000;margin-right:6px}
+#actions{display:flex;gap:8px}
+button{padding:8px 12px;border-radius:6px;border:0;background:#111827;color:#fff}
+button:disabled{opacity:0.5}
+#msg{margin-top:8px}
+footer{padding:8px;text-align:center;font-size:12px;opacity:0.9}
+@media(max-width:780px){canvas{width:100%;height:auto}#controls{padding:6px}}
